@@ -17,11 +17,15 @@ public class Program2 {
 		System.out.println(department);
 		
 		System.out.println("\n==== TEST 2: department findAll ====");
-		
 		List<Department> list = departmentDao.findAll();
 		for(Department dep : list) {
 			System.out.println(dep);
 		}
+		
+		System.out.println("\n==== TEST 3: department insert ====");
+		Department dep = new Department(null, "Sports");
+		departmentDao.insert(dep);
+		System.out.println("Inserted! New id = " + dep.getId());
 		
 		
 
